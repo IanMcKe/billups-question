@@ -22,4 +22,19 @@ describe('rpslsGame', function() {
   });
 
   //Paper Wins cases
+  it('Player 1 wins if he or she enters "paper" and Player 2 enters "rock"', function() {
+    expect(rpslsGame("paper", "rock")).to.equal("Player 1 Wins!");
+  });
+
+  it('Player 1 wins if he or she enters "paper" and Player 2 enters "spock"', function() {
+    expect(rpslsGame("paper", "spock")).to.equal("Player 1 Wins!");
+  });
+
+  it('Player 2 wins if he or she enters "paper" and Player 1 enters "rock"', function() {
+    expect(rpslsGame("rock", "paper")).to.equal("Player 2 Wins!");
+  });
+
+  it('Player 2 wins if he or she enters "paper" and Player 1 enters "spock"', function() {
+    expect(rpslsGame("spock", "paper")).to.equal("Player 2 Wins!");
+  });
 });
