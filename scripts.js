@@ -41,11 +41,17 @@ $(document).ready(function() {
     var computer = computerChoice();
     var result = rpslsGame(player1, computer);
 
-    if(result == "Player 2 Wins!") {
-      $("div#result").text("Computer Wins! You chose: " + player1 + " the computer chose: " + computer);
+    if(result == "Draw!") {
+      $("h1#result").text(result);
+    } else if(result == "Player 2 Wins!") {
+      $("h1#result").text("Computer Wins!");
     } else {
-      $("div#result").text("You Win!" + " You chose: " + player1 + " the computer chose: " + computer);
+      $("h1#result").text("You Win!");
     }
+
+    $("h4").empty();
+    $("h4#player-choice").append("You chose: " + "<i class='fa fa-hand-" + player1 + "-o'></i> " + player1);
+    $("h4#computer-choice").append("The computer chose: " + "<i class='fa fa-hand-" + computer + "-o'></i> " + computer);
 
     event.preventDefault();
   });
