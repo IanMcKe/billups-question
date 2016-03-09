@@ -56,5 +56,36 @@ describe('rpslsGame', function() {
   });
 
   //Lizard Wins cases
+  it('[Lizard] Player 1 wins if he or she enters "lizard" and Player 2 enters "paper"', function() {
+    expect(rpslsGame("lizard", "paper")).to.equal("Player 1 Wins!");
+  });
 
+  it('[Lizard] Player 1 wins if he or she enters "lizard" and Player 2 enters "spock"', function() {
+    expect(rpslsGame("lizard", "spock")).to.equal("Player 1 Wins!");
+  });
+
+  it('[Lizard] Player 2 wins if he or she enters "lizard" and Player 1 enters "paper"', function() {
+    expect(rpslsGame("paper", "lizard")).to.equal("Player 2 Wins!");
+  });
+
+  it('[Lizard] Player 2 wins if he or she enters "lizard" and Player 1 enters "spock"', function() {
+    expect(rpslsGame("spock", "lizard")).to.equal("Player 2 Wins!");
+  });
+
+  //Spock Wins cases
+  it('[Spock] Player 1 wins if he or she enters "spock" and Player 2 enters "rock"', function() {
+    expect(rpslsGame("spock", "rock")).to.equal("Player 1 Wins!");
+  });
+
+  it('[Spock] Player 1 wins if he or she enters "spock" and Player 2 enters "scissors"', function() {
+    expect(rpslsGame("spock", "scissors")).to.equal("Player 1 Wins!");
+  });
+
+  it('[Spock] Player 2 wins if he or she enters "spock" and Player 1 enters "rock"', function() {
+    expect(rpslsGame("rock", "spock")).to.equal("Player 2 Wins!");
+  });
+
+  it('[Spock] Player 2 wins if he or she enters "spock" and Player 1 enters "scissors"', function() {
+    expect(rpslsGame("scissors", "spock")).to.equal("Player 2 Wins!");
+  });
 });
