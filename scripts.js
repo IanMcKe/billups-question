@@ -28,7 +28,7 @@ var rpslsGame = function(player1, player2) {
   } else {
     return "Player 2 Wins!";
   }
-}
+};
 
 $(document).ready(function() {
   $("form button[type=submit]").click(function() {
